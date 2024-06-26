@@ -19,18 +19,17 @@ public class BOJ_1629_곱셈 {
         B = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
 
-        int start = A % C;
-
-        for(int i=1; i<B; i++){
-            start = reminder(start * A, C);
-        }
-        System.out.println(start);
+        answer = pow(A, B, C);
+        System.out.println(answer);
         
     }
 
-    private static int reminder(int dividend, int divisor){
-        answer = dividend % divisor;
-        return answer;
+    private static int pow(int a, int b, int m){
+        if(b==1) return a % m;
+        int val = pow(a, b/2, m);
+        val = val * val % m;
+        if(b%2 == 0) return val;
+        return val * a % m;
     }
 
 }
