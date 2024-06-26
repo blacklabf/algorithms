@@ -1,4 +1,3 @@
-package DataStructure;
 
 public class LC_121_BestTimetoBuyandSellStock {
 

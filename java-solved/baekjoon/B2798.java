@@ -1,4 +1,3 @@
-package Bruteforce;
 // BOJ 2798 : 블랙잭
 
 import java.io.BufferedReader;
